@@ -1,0 +1,21 @@
+name: "MWM Delivery IPA Upload"
+description: "Uploads an IPA file to MWM Delivery and creates a delivery package"
+inputs:
+  api_base_url:
+    description: "The base URL for the MWM Delivery API"
+    required: true
+  service_account_id:
+    description: "MWM Service Account ID"
+    required: true
+  service_account_key:
+    description: "MWM Service Account Key"
+    required: true
+  file_path:
+    description: "Path to the IPA file to upload"
+    required: true
+outputs:
+  upload_id:
+    description: "The MWM Delivery upload ID"
+runs:
+  using: "node24"
+  main: "dist/index.js"

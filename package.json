@@ -1,0 +1,32 @@
+{
+  "name": "mwm-delivery-service-upload-ipa-action",
+  "version": "1.0.0",
+  "description": "A github action to upload IPA to MWM delivery service.",
+  "type": "module",
+  "author": "MWM-io",
+  "license": "MIT",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "bundle": "npm run format:write && npm run package",
+    "format:write": "npx prettier --write .",
+    "format:check": "npx prettier --check .",
+    "local-action": "npx @github/local-action . src/main.js .env",
+    "package": "npx rimraf ./dist && npx rollup --config rollup.config.js"
+  },
+  "dependencies": {
+    "@actions/core": "^3.0.0"
+  },
+  "devDependencies": {
+    "@github/local-action": "^7.0.1",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "prettier": "^3.8.1",
+    "prettier-eslint": "^16.4.2",
+    "rollup": "^4.57.1"
+  }
+}
