@@ -7,7 +7,7 @@ Action workflow.
 
 ```yaml
 - name: Upload IPA to MWM Delivery Service
-  uses: @MWM-io/mwm-delivery-service-upload-ipa-action@v1
+  uses: MWM-io/mwm-delivery-service-upload-ipa-action@v1.0.0
   with:
     api_base_url: 'https://example.com'
     service_account_id: ${{ secrets.MWM_SERVICE_ACCOUNT_ID }}
