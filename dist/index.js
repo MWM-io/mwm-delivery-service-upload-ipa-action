@@ -28113,6 +28113,7 @@ async function run() {
       required: true,
     });
     const filePath = getInput("file_path", { required: true });
+    const changelog = getInput("changelog");
 
     // Validate and read file stats
     const resolvedPath = path.resolve(filePath);
@@ -28180,7 +28181,7 @@ async function run() {
       {
         method: "POST",
         headers: baseHeaders,
-        body: JSON.stringify({ upload_id }),
+        body: JSON.stringify({ upload_id, changelog }),
       },
     );
 

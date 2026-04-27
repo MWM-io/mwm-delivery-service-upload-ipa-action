@@ -14,6 +14,7 @@ export async function run() {
       required: true,
     });
     const filePath = core.getInput("file_path", { required: true });
+    const changelog = core.getInput("changelog");
 
     // Validate and read file stats
     const resolvedPath = path.resolve(filePath);
@@ -81,7 +82,7 @@ export async function run() {
       {
         method: "POST",
         headers: baseHeaders,
-        body: JSON.stringify({ upload_id }),
+        body: JSON.stringify({ upload_id, changelog }),
       },
     );
 

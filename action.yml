@@ -13,6 +13,9 @@ inputs:
   file_path:
     description: "Path to the IPA file to upload"
     required: true
+  changelog:
+    description: "The list of changes made to the app. Markdown is supported."
+    required: false
 outputs:
   upload_id:
     description: "The MWM Delivery upload ID"
