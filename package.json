@@ -1,6 +1,6 @@
 {
   "name": "mwm-delivery-service-upload-ipa-action",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A github action to upload IPA to MWM delivery service.",
   "type": "module",
   "author": "MWM-io",
